@@ -2,6 +2,7 @@
 
 
 class account{
+private:
     std :: string Name;
     std :: string Password;
     int ID;
