@@ -1,14 +1,18 @@
+#pragma once
+
 #include <string>
+#include <vector>
 
-
-class account{
+class account
+{
 private:
     std :: string Name;
     std :: string Password;
     int ID;
-    double saldo;
+    double Saldo = 300;
+    std :: vector<std :: string> historico;
 public:
-    double getsaldo(const std :: string& name, const std :: string& password) const;
+    double getsaldo(const std :: string& name) const;
     
     //setters e getters
     void setname(const std :: string& name);
@@ -17,5 +21,7 @@ public:
     void setpassword(const std :: string& password);
     std :: string getpassword() const;
 
-    void setsaldo(double valor);
+    void deposito(double valor);
+    void saque(double valor);
+    void historico_transacoes();
 };

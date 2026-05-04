@@ -1,4 +1,5 @@
 #include "conta.hpp"
+#include "banco.hpp"
 #include <iostream>
 
 using std :: cout;
@@ -10,17 +11,20 @@ int main()
     account novaconta;
     novaconta.setname("vitin");
     novaconta.setpassword("123");
-    novaconta.setsaldo(21.22);
+    
+    account novaconta2;
+    novaconta2.setname("camila");
+    novaconta2.setpassword("700");
+    
+    bank nubank;
+    nubank.cadastra_cliente(novaconta);
+    nubank.cadastra_cliente(novaconta2);
+    nubank.transation(novaconta, novaconta2, 50);
 
-    string nome = "vitin";
-    string senha = "122"; 
-    double saldo = novaconta.getsaldo(nome, senha);
-
-    cout << "o nome da conta é " << novaconta.getname(); 
-    cout << " || a senha da conta é " << novaconta.getpassword();
-    if(saldo != -1)
-    cout << " || e o saldo é " << saldo << endl;
-    else cout << endl << " ============= ERRO, ALGUM DOS SEUS DADOS ESTA INCORRETO ==========" << endl;
+    account teste;
+    cout << novaconta.getsaldo("vitin") << endl;
+    cout << novaconta2.getsaldo("camila") << endl;
+    cout << nubank.conta_existe(novaconta) << endl;
 
     return 0;
 }
