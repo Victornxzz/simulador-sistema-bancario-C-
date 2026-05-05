@@ -12,6 +12,11 @@ private:
     double Saldo = 300;
     std :: vector<std :: string> historico;
 public:
+//===========construtores==============//
+    account() = default;
+    account(const std:: string& name, const std:: string& senha);
+    
+//======funçoes sobre logistica========//
     double getsaldo(const std :: string& name) const;
     
     //setters e getters

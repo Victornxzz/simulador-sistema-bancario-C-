@@ -7,8 +7,15 @@ class bank
 {
 private:
     std :: vector<account> clientes;
-public: 
-    void cadastra_cliente(const account& conta);
-    void transation(account& conta_que_manda, account& conta_que_recebe, double valor);   
-    bool conta_existe(const account& conta) const;
+public:
+//===========construtores==============//
+    bank() = default;
+    bank(account& conta);
+
+//======funçoes sobre logistica========//
+    void cadastra_cliente(account& conta);
+    bool saldo_suficiente(const std::string& nome, const double valor);
+    bool transaction(const std::string& nome_que_manda, const std::string& nome_que_recebe,const double valor);   
+    bool conta_existe(const std:: string& nome) const;
+    void consultar_saldo(const std :: string& nome) const;
 };

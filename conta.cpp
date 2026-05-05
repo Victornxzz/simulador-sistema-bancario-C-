@@ -6,6 +6,12 @@
 
 using std :: string;
 
+account::account(const std:: string& name, const std:: string& senha)
+{
+    setname(name);
+    setpassword(senha);
+}
+
 double account::getsaldo(const string& name) const {
     if(Name == name)
     {
