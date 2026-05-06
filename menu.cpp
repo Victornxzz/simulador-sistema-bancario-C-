@@ -11,8 +11,6 @@ using std :: cout;
 using std :: cin;
 using std :: endl;
 
-//pra rodar o codigo é: g++ main.cpp conta.cpp banco.cpp menu.cpp -o test
-
 void sleep()
 {
     std::this_thread::sleep_for(std::chrono::milliseconds(2000));
