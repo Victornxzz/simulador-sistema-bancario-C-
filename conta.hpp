@@ -9,7 +9,7 @@ private:
     std :: string Name;
     std :: string Password;
     int ID;
-    double Saldo = 300;
+    double Saldo = 0;
     std :: vector<std :: string> historico;
 public:
 //===========construtores==============//
@@ -28,5 +28,5 @@ public:
 
     void deposito(double valor);
     void saque(double valor);
-    void historico_transacoes();
+    void historico_transacoes() const;
 };

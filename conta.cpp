@@ -8,8 +8,8 @@ using std :: string;
 
 account::account(const std:: string& name, const std:: string& senha)
 {
-    setname(name);
-    setpassword(senha);
+    this->setname(name);
+    this->setpassword(senha);
 }
 
 double account::getsaldo(const string& name) const {
@@ -65,7 +65,7 @@ void account::saque(double valor)
 
 }
 
-void account::historico_transacoes()
+void account::historico_transacoes() const
 {
     int tam = this->historico.size();
     std::cout << "{";
